@@ -14,11 +14,19 @@ var sharedWords = function(duration, fn) {
 };
 
 
-describe('sharedWords', function() {
-  it('finds shared words', function(done) {
-    sharedWords(30, function() {
-      
-      e();
+/**
+ * Needs to turn 2 strings into an array
+ * We need to send out function two things that it needs to split
+ * 
+ * 
+ */
+
+describe('comparedwords', function() {
+  it('finds compares words', function(done) {
+   var words1 = []
+   var words2 = []
+   var commonWords = compareWords(words1, words2);
+   expect (???).to.eql(???);
     });
   });
 });

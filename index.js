@@ -1,4 +1,6 @@
-var sharedWords
+var sharedWords = function(wordsArray1, wordsArray2) {
+
+};
 
 
 /**
