@@ -1,17 +1,8 @@
 var chai = require('chai')
 var expect = chai.expect;
 
-
-
-
-var sharedWords = function(duration, fn) {
-  console.log('setting the timer for %d minutes', duration);
-  setTimeout(function() {
-
-    console.log('The timer is going off!!!');
-    fn();
-  }, 30);
-};
+var functions = require('../index');
+var compareWords = functions.compareWords;
 
 
 /**
@@ -21,12 +12,28 @@ var sharedWords = function(duration, fn) {
  * 
  */
 
-describe('comparedwords', function() {
-  it('finds compares words', function(done) {
-   var words1 = []
-   var words2 = []
-   var commonWords = compareWords(words1, words2);
-   expect (???).to.eql(???);
-    });
+describe('comparedWords', function() {
+  it('finds compares words', function() {
+   var words1 = ['runner', 'music maker', 'hiker']
+   var words2 = ['runner', 'swimmer', 'soccer player']
+   var result = compareWords(words1, words2);
+   expect(result).to.eql(['runner']);
   });
 });
+
+
+
+
+
+
+
+
+
+// var sharedWords = function(duration, fn) {
+//   console.log('setting the timer for %d minutes', duration);
+//   setTimeout(function() {
+
+//     console.log('The timer is going off!!!');
+//     fn();
+//   }, 30);
+// };
